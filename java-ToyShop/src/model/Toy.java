@@ -1,11 +1,12 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import view.userView;
 
 enum ToyType {
-	
 	
 	APEACH {
 		int sellToy() {
@@ -22,31 +23,28 @@ enum ToyType {
 			return 3000;
 		}
     };	
-	
-	
 	abstract int sellToy();
-	
 }
 
 public class Toy {
 	Scanner sc = new Scanner(System.in);
-//	private static final int APEACH_PRICE = 1000;
-//	private static final int LION_PRICE = 2000;
-//	private static final int CHUNSIK_PRICE = 3000;
-	private final ToyType type;
-	public static int pay;
+	private final ToyType type;	// enum 변수에  접근
 	userView uv = new userView();
+	public int quantity;
+	public int totalPrice;
+	List<Toy> toyList = new ArrayList<>();
 	
 	public Toy(ToyType type) {
 		this.type = type;
+		this.quantity = 0;
 	}
 	
 	public Toy() {
 		this.type = null;
-		
+		this.quantity = 0;
 	}
 	
-	int sellToy() {
+	public int sellToy() {
 		return type.sellToy();
 	}
 	
@@ -56,12 +54,21 @@ public class Toy {
 		ToyType selectedToyType = ToyType.values()[choiceToy]; // 인덱스로 장난감 고르기
 		
 		Toy sell = new Toy(selectedToyType);	// 입력된 인덱스로 장난감 판별
-		pay = sell.sellToy();	// 구매할 장난감의 가격이 pay에 저장
+		System.out.print("몇개 살래? : ");
+		this.quantity = sc.nextInt();
 		
-	}
-	
-	public int getPay() {
-		return pay;
+		for(int i = 0; i < quantity; i++) {
+			Toy toy = new Toy(selectedToyType);
+			toyList.add(toy);
+		}
+		totalPrice = toyList.stream()		// toyList 를 스트림으로 변환 -> 
+				.mapToInt(Toy::sellToy)		
+				// Toy 객체를 스트림으로 변환 후, 각 'Toy'객체에 대해 sellToy 메서드 호출
+				// 그 결과를 정수로 매핑 후 합산 mapToInt
+				.sum();
+		
+//		pay = sell.sellToy();	// 구매할 장난감의 가격이 pay에 저장
+		
 	}
 	
 }

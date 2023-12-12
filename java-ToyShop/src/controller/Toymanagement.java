@@ -11,13 +11,16 @@ public class Toymanagement {
 	Scanner sc = new Scanner(System.in);
 	Client client = new Client();
 	Toy toy = new Toy();
+	shoppingCart cart = new shoppingCart();
+	
 //	private int balance = 0;
 	public int balance;
 	
 	public int toyPay() {	// pay만큼 차감
 	client.readymoneyInput();
 	toy.chooseToy();
-	balance = client.readymoney -= toy.getPay();
+//	balance = client.readymoney -= shoppingCart.getPay();
+	balance = client.readymoney - toy.totalPrice;
 	return balance;	// 여기까진 차감액이 잘 들어옴
 	
 	}
