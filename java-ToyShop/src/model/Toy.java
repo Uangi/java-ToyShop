@@ -34,7 +34,7 @@ public class Toy {
 //	private static final int LION_PRICE = 2000;
 //	private static final int CHUNSIK_PRICE = 3000;
 	private final ToyType type;
-	private int pay;
+	public static int pay;
 	userView uv = new userView();
 	
 	public Toy(ToyType type) {
