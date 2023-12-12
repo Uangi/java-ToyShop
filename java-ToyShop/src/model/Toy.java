@@ -35,7 +35,7 @@ public class Toy {
 	List<Toy> toyList = new ArrayList<>();
 	
 	public Toy(ToyType type) {
-		this.type = type;
+		this.type = type;	// 수량과 타입
 		this.quantity = 0;
 	}
 	
