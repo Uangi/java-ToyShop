@@ -12,14 +12,18 @@ public class Toymanagement {
 	Client client = new Client();
 	Toy toy = new Toy();
 //	private int balance = 0;
+	public int balance;
 	
 	public int toyPay() {	// pay만큼 차감
 	client.readymoneyInput();
 	toy.chooseToy();
-	client.readymoney -= toy.getPay();
-//	client.setBalance(client.balance);
-	client.balance = client.readymoney;
-	return client.balance;	// 여기까진 차감액이 잘 들어옴
+	balance = client.readymoney -= toy.getPay();
+	return balance;	// 여기까진 차감액이 잘 들어옴
+	
+	}
+
+	public int getBalance() {
+		return balance;
 	}
 
 	
