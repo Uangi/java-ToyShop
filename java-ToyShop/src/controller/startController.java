@@ -10,7 +10,7 @@ public class startController {
 		Client client = new Client();
 		Toymanagement tm = new Toymanagement();
 		tm.toyPay();
-		System.out.println("남은 잔액은 : " + client.getReadymoney());
+		System.out.println("남은 잔액은 : " + client.getBalance());
 	}
 
 }
