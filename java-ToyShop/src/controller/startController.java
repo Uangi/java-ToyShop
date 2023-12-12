@@ -8,12 +8,9 @@ public class startController {
 	public static void main(String[] args) {
 		
 		Client client = new Client();
-		Toy toy = new Toy();
 		Toymanagement tm = new Toymanagement();
-		
-		client.readymoneyInput();
 		tm.toyPay();
-		System.out.println("남은 잔액은 : " + client.readymoney);
+		System.out.println("남은 잔액은 : " + tm.getBalance());
 	}
 
 }
