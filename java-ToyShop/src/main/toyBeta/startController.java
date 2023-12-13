@@ -1,7 +1,5 @@
-package controller;
+package main.toyBeta;
 
-import model.Client;
-import model.Toy;
 
 public class startController {
 
@@ -9,8 +7,11 @@ public class startController {
 		
 		Client client = new Client();
 		Toymanagement tm = new Toymanagement();
+		Toy toy = new Toy();
 		tm.toyPay();
 		System.out.println("남은 잔액은 : " + tm.getBalance());
+	//	System.out.println(toy.selectedToyType + "의 남은 재고는 "+ toy.totalStock + "개");
+		// 
 	}
 
 }

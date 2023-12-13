@@ -1,8 +1,6 @@
-package model;
+package main.toyBeta;
 
 import java.util.Scanner;
-
-import view.userView;
 
 public class Client {
 	
