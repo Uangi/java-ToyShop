@@ -2,7 +2,7 @@ package main.toyshop.model;
 
 public class Toy {
 
-	private String name;
+	public static String name;
 	private int price;
 	
 	public Toy(MenuItem menuItem) {

@@ -52,7 +52,7 @@ enum ToyStock {
 
 		// menu에서 자꾸 null값이 들어옴. --> 이게 해결되어야 수량도 해결가능
 		public String getSelectedMenuName() {
-			String selectedMenuName = menu.getName();
+			String selectedMenuName = Toy.name;
 			return selectedMenuName;
 		}
 
