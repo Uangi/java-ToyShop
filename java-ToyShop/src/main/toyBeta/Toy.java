@@ -47,7 +47,6 @@ enum Stock {
 public class Toy {
     Scanner sc = new Scanner(System.in);
     private final ToyType type;
-    private Stock st;
 
     userView uv = new userView();
     public int quantity;
@@ -55,25 +54,23 @@ public class Toy {
     public int totalStock;
     public ToyType selectedToyType;
     
-    public ToyType getSelectedToyType() {
-		return selectedToyType;
-	}
+//    public ToyType getSelectedToyType() {
+//		return selectedToyType;
+//	}
 
 	List<Toy> toyList = new ArrayList<>();
 
     public Toy(ToyType type) {
         this.type = type;
-        this.quantity = 0;
+//        this.quantity = 0;
     }
 
-    public Toy() {
-        this.type = null;
-        this.quantity = 0;
-    }
+//    public Toy() {
+//        this.type = null;
+//    }
 
     public Toy(Stock selectedToyStock) {
         this.type = null;
-		this.st = null;
     }
 
     public int sellToy() {
