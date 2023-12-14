@@ -21,13 +21,14 @@ public class Menu {
 	}
 	
 	public MenuItem choose() {	// 메뉴 고르기
+		
 		System.out.print("뭐 살래? ");
 		name = sc.next();
 		for(MenuItem doll : items) {	// 
 			if(doll.getName().equals(name)) {
 				return doll;
 			}
-		}
+		} 
 		return null;
 	}
 }
