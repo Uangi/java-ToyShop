@@ -7,7 +7,6 @@ import java.util.Scanner;
 import main.toyshop.model.MenuItem;
 
 public class Menu {
-
 	private List<MenuItem> items;	// 메뉴판 - 메뉴들을 자료형으로 삼는 객체 생성
 	private String name;
 	Scanner sc = new Scanner(System.in);

@@ -3,7 +3,6 @@ package main.toyshop.model;
 import java.util.Scanner;
 
 public class Customer {
-
 	Scanner sc = new Scanner(System.in);
 	private int balance;
 	
@@ -16,7 +15,7 @@ public class Customer {
 		return balance;
 	}
 	
-	public int MoneyInput() {
+	public int moneyInput() {
 		System.out.print("µ· ¾ó¸¶ ÀÖ¾î? ");
 		Scanner sc = new Scanner(System.in);
 		int readymoney = sc.nextInt();

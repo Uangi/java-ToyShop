@@ -4,7 +4,7 @@ import java.util.Scanner;
 import main.toyshop.controller.OrderController;
 
 public class Clerk {	// menuItem을 기반으로 커피를 만든다.
-	Scanner sc = new Scanner(System.in);
+	Scanner sc2 = new Scanner(System.in);
 	private int quantity;
 	
 	public Toy takeToy(MenuItem menuItem) {
@@ -12,12 +12,9 @@ public class Clerk {	// menuItem을 기반으로 커피를 만든다.
 		return toy;
 	}
 	
-	public int requestQuantityToBuy(Scanner scanner) {	// 애는 잘됨
-		quantity = sc.nextInt();
-		return quantity;
-	}
-	
-	public int getQuantity() {
+	public int requestQuantityToBuy() {	// 애는 잘됨
+		System.out.print("몇 개 살래 ? ");
+		quantity = sc2.nextInt();
 		return quantity;
 	}
 

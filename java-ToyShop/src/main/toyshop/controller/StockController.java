@@ -20,20 +20,17 @@ enum ToyStock {
 			return 5 - quantity;
 		}
 	};
-	abstract int decreaseStock(int quantity);	// √ﬂªÛ
-	
-	}
+	abstract int decreaseStock(int quantity);	// Ï∂îÏÉÅ
+}
 
-	public class StockController {	// ¿Á∞Ì ∞¸∏Æ
-		
+	public class StockController {	// Ïû¨Í≥† Í¥ÄÎ¶¨
 		Scanner sc = new Scanner(System.in);
 		Clerk clerk = new Clerk();
 		private int totalStock;
 		
-		public int remainingStock(MenuItem menuitem) {
+		public int remainingStock(MenuItem menuitem, int quantityToBuy) {
 			ToyStock selectedToyStock = ToyStock.valueOf(menuitem.getName());
-			clerk.requestQuantityToBuy(sc);
-			totalStock = selectedToyStock.decreaseStock(clerk.getQuantity());
-			return totalStock;	// 0¿∏∑Œ π›»Ø
+			totalStock = selectedToyStock.decreaseStock(quantityToBuy);
+			return totalStock;	
 		}
 	}

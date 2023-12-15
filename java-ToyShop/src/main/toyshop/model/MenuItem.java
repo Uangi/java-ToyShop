@@ -1,7 +1,6 @@
 package main.toyshop.model;
 
 public class MenuItem {	// 메뉴판 중 메뉴
-
 	private String name;
 	private int price;
 	
