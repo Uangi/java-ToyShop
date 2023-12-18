@@ -2,9 +2,11 @@ package main.toyshop.model;
 
 import java.util.Scanner;
 import main.toyshop.controller.OrderController;
+import main.toyshop.controller.PurchaseController;
 
 public class Clerk {	// menuItem을 기반으로 커피를 만든다.
-	Scanner sc2 = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
+	
 	private int quantity;
 	
 	public Toy takeToy(MenuItem menuItem) {
@@ -14,12 +16,12 @@ public class Clerk {	// menuItem을 기반으로 커피를 만든다.
 	
 	public int requestQuantityToBuy() {	// 애는 잘됨
 		System.out.print("몇 개 살래 ? ");
-		quantity = sc2.nextInt();
+		quantity = sc.nextInt();
 		return quantity;
 	}
-
+	
 	public static void run() {
 		OrderController oc = new OrderController();
-		oc.order();
+			oc.order();
 	}
 }

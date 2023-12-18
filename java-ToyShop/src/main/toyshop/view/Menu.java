@@ -18,7 +18,8 @@ public class Menu {
 		items.add(new MenuItem("LION", 3000));
 	}
 	
-	public MenuItem choose() {	// 메뉴 고르기
+public MenuItem choose() {	// 메뉴 고르기
+	while (true) {
 		System.out.print("뭐 살래? ");
 		name = sc.next();
 		for(MenuItem doll : items) {	// 
@@ -26,9 +27,9 @@ public class Menu {
 				return doll;	// 장난감 반환
 			}
 		} 
-		return null;
+		System.out.println("없는 메뉴야 다시 골라");
 	}
-
+}
 	public String getName() {
 		return name;
 	}

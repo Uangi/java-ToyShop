@@ -14,6 +14,6 @@ public class Toy {
 	}
 
 	public void Sell() {
-		System.out.println("구입한 장난감은 " + name + "이며 개당 " + price + "원입니다.");
+		System.out.println("\n구입한 장난감은 " + name + "이며 개당 " + price + "원입니다.");
 	}
 }

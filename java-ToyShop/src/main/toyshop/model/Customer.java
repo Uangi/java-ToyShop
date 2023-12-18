@@ -22,5 +22,4 @@ public class Customer {
 		balance = readymoney;
 		return balance;
 	}
-	
 }
