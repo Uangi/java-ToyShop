@@ -29,7 +29,7 @@ public class OrderController {
 		
 		try {
 		do {
-		menuItem = menu.choose();	// 뭐 살래?
+		menuItem = menu.choose(sc);	// 뭐 살래?
 		customer.moneyInput();	// 얼마있어?
 		int quantityToBuy = clerk.requestQuantityToBuy();
 		String selectedMenuName = menuItem.getName();	// 뭐 샀는지 이름받기

@@ -1,12 +1,9 @@
 package main.toyshop.view;
 
-import java.util.Scanner;
-
 import main.toyshop.controller.StockController;
 import main.toyshop.model.MenuItem;
 
 public class InputView {
-	Scanner sc = new Scanner(System.in);
 	StockController stockcontroller = new StockController();
 	
 	public void resultBalance(int resultmoney) {	// Payment에서 반환된 resultmoney가 여기서 사용

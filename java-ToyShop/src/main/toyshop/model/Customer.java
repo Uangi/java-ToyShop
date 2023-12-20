@@ -3,8 +3,9 @@ package main.toyshop.model;
 import java.util.Scanner;
 
 public class Customer {
-	Scanner sc = new Scanner(System.in);
+	Scanner scct = new Scanner(System.in);
 	private int balance;
+	private int readymoney;
 	
 	public Customer() {	// 잔액
 		this.balance = getBalance();
@@ -16,9 +17,13 @@ public class Customer {
 	}
 	
 	public int moneyInput() {
+		try {
 		System.out.print("돈 얼마 있어? ");
-		Scanner sc = new Scanner(System.in);
-		int readymoney = sc.nextInt();
+		Scanner scct = new Scanner(System.in);
+		readymoney = scct.nextInt();
+		} catch (NumberFormatException e) {
+			System.out.println("숫자만 입력해");
+		}
 		balance = readymoney;
 		return balance;
 	}

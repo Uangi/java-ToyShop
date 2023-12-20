@@ -8,16 +8,16 @@ enum FinalDecision {
 
 public class PurchaseController {
 
-		Scanner scanner = new Scanner(System.in);
+		Scanner scpc = new Scanner(System.in);
 		StockController stockcontroller = new StockController();
 		
 	    public boolean purchaseDecision() {
-	        try (Scanner scanner = new Scanner(System.in)) {
-				    String userInput = scanner.next().toUpperCase();
+	        try (Scanner scpc = new Scanner(System.in)) {
+				    String userInput = scpc.next().toUpperCase();
 
 				    try {
 				    	FinalDecision decision = FinalDecision.valueOf(userInput);
-				        return performAction(decision);
+				        return performAction(decision);	// true
 				    } catch (IllegalArgumentException e) {
 				        System.out.println("잘못된 입력입니다. 다시 입력하세요.");
 				    }

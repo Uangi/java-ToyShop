@@ -9,8 +9,7 @@ import main.toyshop.model.MenuItem;
 public class Menu {
 	private List<MenuItem> items;	// 메뉴판 - 메뉴들을 자료형으로 삼는 객체 생성
 	private String name;
-	Scanner sc = new Scanner(System.in);
-	
+//	private boolean continueMenu = true;
 	public Menu() {
 		this.items = new ArrayList<>();
 		items.add(new MenuItem("APEACH", 1000));	// MenuItem 클래스 생성자에 name, price가 있어서 가능
@@ -18,17 +17,21 @@ public class Menu {
 		items.add(new MenuItem("LION", 3000));
 	}
 	
-public MenuItem choose() {	// 메뉴 고르기
-	while (true) {
+public MenuItem choose(Scanner sc) {	// 메뉴 고르기
+	// do while true주기
+	do {
 		System.out.print("뭐 살래? ");
-		name = sc.next();
-		for(MenuItem doll : items) {	// 
-			if(doll.getName().equals(name)) {
-				return doll;	// 장난감 반환
+		String tname = sc.next();
+		name = tname;	// 입력도 못하고 NULL 값 반환
+//		name = sc.next();
+		for(MenuItem toys : items) {	// 
+			if(toys.getName().equals(name)) {
+//				continueMenu = false;
+				return toys;	// 장난감 반환
 			}
 		} 
 		System.out.println("없는 메뉴야 다시 골라");
-	}
+	} while(true);	// 
 }
 	public String getName() {
 		return name;

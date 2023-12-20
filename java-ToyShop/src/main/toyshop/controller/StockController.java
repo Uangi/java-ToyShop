@@ -24,7 +24,7 @@ enum ToyStock {
 }
 
 	public class StockController {	// 재고 관리
-		Scanner sc = new Scanner(System.in);
+		Scanner scsc = new Scanner(System.in);
 		Clerk clerk = new Clerk();
 		private int totalStock;
 		
