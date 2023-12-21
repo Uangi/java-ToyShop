@@ -19,7 +19,6 @@ public class Customer {
 	public int moneyInput() {
 		try {
 		System.out.print("돈 얼마 있어? ");
-		Scanner scct = new Scanner(System.in);
 		readymoney = scct.nextInt();
 		} catch (NumberFormatException e) {
 			System.out.println("숫자만 입력해");

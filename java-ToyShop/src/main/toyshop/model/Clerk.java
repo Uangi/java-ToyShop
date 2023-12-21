@@ -23,21 +23,21 @@ public class Clerk {	// menuItem을 기반으로 커피를 만든다.
 		return quantity;
 	}
 	
-	private static void Restart() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("종료해 말어");
-		int cho = sc.nextInt();
-		if(cho == 1) {
-			// 반복
-		}
-		else if (cho == 2) {
-			System.exit(0);
-		}
-	}
+//	private static void Restart() {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("종료해 말어");
+//		int cho = sc.nextInt();
+//		if(cho == 1) {
+//			// 반복
+//		}
+//		else if (cho == 2) {
+//			System.exit(0);
+//		}
+//	}
 	public static void run() {
 		OrderController oc = new OrderController();
 		
 			oc.order();
-			Restart();
+//			Restart();
 	}
 }
