@@ -10,7 +10,7 @@ import main.toyshop.view.InputView;
 import main.toyshop.view.Menu;
 
 public class OrderController {
-	Scanner sc = new Scanner(System.in);
+	
 	Menu menu = new Menu();
 	private MenuItem menuItem; // 클래스 멤버 변수로 선언
 	Clerk clerk = new Clerk();
@@ -29,13 +29,18 @@ public class OrderController {
 		
 		try {
 		do {
+		Scanner sc = new Scanner(System.in);
 		menuItem = menu.choose(sc);	// 뭐 살래?
+		
 		customer.moneyInput();	// 얼마있어?
+		
 		int quantityToBuy = clerk.requestQuantityToBuy();
 		String selectedMenuName = menuItem.getName();	// 뭐 샀는지 이름받기
 		Toy toy = clerk.takeToy(menuItem);
+		
 		toy.Sell();				// 구입한 장난감 설명
 		pay = resultPay(quantityToBuy);	// 총 지불금액
+		
 		inputview.buyConfirm(pay);	// 최종 구매 결정
 		
 		if(purchaseController.purchaseDecision()) {	// true가 아니라면, 구매 의사 묻기
@@ -63,7 +68,7 @@ public class OrderController {
 	}
 	
 	public int resultPay(int quantityToBuy) {
-		pay = menuItem.cost() * quantityToBuy;	// 가격 * 수량
+		pay = menuItem.cost() * quantityToBuy;
 		return pay;
 	}
 
