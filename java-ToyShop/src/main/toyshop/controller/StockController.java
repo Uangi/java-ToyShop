@@ -1,6 +1,5 @@
 package main.toyshop.controller;
 
-import java.util.Scanner;
 import main.toyshop.model.Clerk;
 import main.toyshop.model.MenuItem;
 
@@ -24,7 +23,6 @@ enum ToyStock {
 }
 
 	public class StockController {	// 재고 관리
-		Scanner scsc = new Scanner(System.in);
 		Clerk clerk = new Clerk();
 		private int totalStock;
 		

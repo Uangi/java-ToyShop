@@ -7,8 +7,6 @@ enum FinalDecision {
 }
 
 public class PurchaseController {
-
-		Scanner scpc = new Scanner(System.in);
 		StockController stockcontroller = new StockController();
 		
 	    public boolean purchaseDecision() {
